@@ -1,7 +1,4 @@
-import React from 'react'
-
-const MePage = () => {
-  return null
+export default function Placeholder() {
+  // Không render gì, chỉ để Next tạo manifest cho group này
+  return null;
 }
-
-export default MePage
