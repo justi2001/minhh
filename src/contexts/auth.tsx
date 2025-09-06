@@ -1,5 +1,4 @@
 "use client"
-import { useRouter } from "next/navigation";
 
 import React, { createContext, useContext, useEffect, useState } from "react";
 
@@ -14,21 +13,16 @@ const AuthContext = createContext<AuthContext>({
 })
 
 export const AuthProvider = ({children}:{children:React.ReactNode})=>{
-    const [auth,setAuth]= useState(()=>{
-        const authLocal = JSON.parse(localStorage.getItem('auth') || 'false') as boolean
-        return authLocal
-    })
+    const [auth,setAuth]= useState(false)
 
-const router = useRouter()
- useEffect(() => {
-    if (!auth) {
-      router.replace("/login"); // chưa login thì quay về
-      return
-    }
-  }, [auth]);
+    // Lấy giá trị từ localStorage chỉ khi client mount
+    useEffect(() => {
+        const authLocal = JSON.parse(window.localStorage.getItem('auth') || 'false') as boolean
+        setAuth(authLocal)
+    }, [])
 
     useEffect(()=>{
-        localStorage.setItem('auth', JSON.stringify(auth))
+        window.localStorage.setItem('auth', JSON.stringify(auth))
     },[auth])
 
 

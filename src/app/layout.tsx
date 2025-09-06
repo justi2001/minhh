@@ -1,20 +1,3 @@
-// "use client"
-// import './globals.css';
-// import { AuthProvider } from '@/contexts/auth';
-
-// export default function RootLayout({ children }: { children: React.ReactNode }) {
-
-
-//   return (
-//     <AuthProvider>
-//     <html lang="vi">
-//       <body className="flex h-screen bg-gray-100">
-//        {children}
-//       </body>
-//     </html>
-//     </AuthProvider>
-//   );
-// }
 
 import "./globals.css";
 import { AuthProvider } from "@/contexts/auth";
