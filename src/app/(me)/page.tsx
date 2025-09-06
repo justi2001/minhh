@@ -1,9 +1,7 @@
 import React from 'react'
 
 const MePage = () => {
-  return (
-    <div>Home</div>
-  )
+  return null
 }
 
 export default MePage
