@@ -138,11 +138,11 @@ const Navbar = () => {
                 const isActive = item.name === activeItem;
 
                 return (
-                  <Link href={item.path} key={itemIndex}>
+                  <Link href={'/me'+item.path} key={itemIndex}>
                     <div
                       className={`flex items-center px-4 py-3 text-sm cursor-pointer transition-colors duration-150 ${isActive ? 'bg-blue-50 text-blue-600 border-r-4 border-blue-600' : 'text-gray-700 hover:bg-gray-50'}`}
                       onClick={() => {
-                        setActiveItem(item.name);
+                        setActiveItem('/me'+item.name);
                         if (isMobile) setIsOpen(false);
                       }}
                     >

@@ -13,7 +13,7 @@ const LoginPage: React.FC = () => {
 
   const handleSignin=()=>{
     setAuth(true)
-    router.push('/thong-tin-ca-nhan')
+    router.push('/me/thong-tin-ca-nhan')
   }
 
   return (
